@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr"><head>
 <meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/oc-inter/pedlv/main/icon-180.png">
 <link rel="icon" type="image/png" sizes="512x512" href="https://raw.githubusercontent.com/oc-inter/pedlv/main/icon-512.png">
@@ -2758,7 +2761,7 @@ function norm(s) {
 // ── Report HTML builder ───────────────────────────────────────────────────────
 
 // ── Détection de mise à jour (même mécanisme que bilan-passage / observations-terrain) ──
-const APP_VERSION = '2026.09.12-3'; // à bumper avec SW_VERSION dans sw.js à chaque déploiement
+const APP_VERSION = '2026.09.12-4'; // à bumper avec SW_VERSION dans sw.js à chaque déploiement
 
 function checkForUpdate() {
   const updatePending = localStorage.getItem('pedlv_update_pending');
