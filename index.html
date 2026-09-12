@@ -506,7 +506,7 @@
 
   <!-- TITRE -->
   <div class="title-block">
-    <h1>Synthèse <span id="easter-egg-podium" onclick="handleEasterEgg()" style="cursor:default;user-select:none;">réseau</span></h1>
+    <h1><span data-i18n="app_title_prefix">Synthèse</span> <span id="easter-egg-podium" onclick="handleEasterEgg()" data-i18n="app_title_suffix" style="cursor:default;user-select:none;">réseau</span></h1>
     <p data-i18n="app_subtitle">Générez votre rapport mensuel en quelques secondes</p>
   </div>
 
@@ -759,7 +759,7 @@
             <select class="prio-select" id="sp-proth" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
-            <div class="settings-field"><label>% Taux concrétisation</label><input type="number" id="s-txc" min="0" max="100"></div>
+            <div class="settings-field"><label data-i18n="settings_txc">% Taux concrétisation</label><input type="number" id="s-txc" min="0" max="100"></div>
             <select class="prio-select" id="sp-txc" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
@@ -829,6 +829,8 @@ var TRANSLATIONS = {
   fr: {
     'app_title': 'Synthèse réseau',
     'app_subtitle': 'Générez votre rapport mensuel en quelques secondes',
+    'app_title_prefix': 'Synthèse',
+    'app_title_suffix': 'réseau',
     'drop_label': 'Glissez vos fichiers ici ou cliquez pour sélectionner',
     'btn_generate': 'Configurer & Générer →',
     'status_loaded': '5 fichiers chargés — cliquez pour configurer et générer',
@@ -998,6 +1000,7 @@ var TRANSLATIONS = {
     'settings_pm1': 'PM 1ère paire',
     'settings_proth': 'Nb prothèses (base mois)',
     'settings_txe': 'Tx réussite essai (%)',
+    'settings_txc': '% Taux concrétisation',
     'settings_assur': '% Assurance audio',
     'settings_ta': '% Test auditif',
     'settings_tva': '% Vente additionnelle',
@@ -1036,6 +1039,8 @@ var TRANSLATIONS = {
   en: {
     'app_title': 'Network Summary',
     'app_subtitle': 'Generate your monthly report in seconds',
+    'app_title_prefix': 'Network',
+    'app_title_suffix': 'Summary',
     'drop_label': 'Drop your files here or click to select',
     'btn_generate': 'Configure & Generate →',
     'status_loaded': '5 files loaded — click to configure and generate',
@@ -1205,6 +1210,7 @@ var TRANSLATIONS = {
     'settings_pm1': '1st frame avg.',
     'settings_proth': 'Hearing aids (monthly base)',
     'settings_txe': 'Trial success rate (%)',
+    'settings_txc': '% Conversion rate',
     'settings_assur': '% Audio insurance',
     'settings_ta': '% Hearing test',
     'settings_tva': '% Add-on sales',
@@ -1243,6 +1249,8 @@ var TRANSLATIONS = {
   es: {
     'app_title': 'Resumen de red',
     'app_subtitle': 'Genera tu informe mensual en segundos',
+    'app_title_prefix': 'Resumen',
+    'app_title_suffix': 'de red',
     'drop_label': 'Arrastra tus archivos aquí o haz clic para seleccionar',
     'btn_generate': 'Configurar y Generar →',
     'status_loaded': '5 archivos cargados — haz clic para configurar y generar',
@@ -1412,6 +1420,7 @@ var TRANSLATIONS = {
     'settings_pm1': 'PM 1ª montura',
     'settings_proth': 'Audífonos (base mensual)',
     'settings_txe': 'Tasa éxito prueba (%)',
+    'settings_txc': '% Tasa de concreción',
     'settings_assur': '% Seguro audio',
     'settings_ta': '% Test auditivo',
     'settings_tva': '% Venta adicional',
@@ -1450,6 +1459,8 @@ var TRANSLATIONS = {
   he: {
     'app_title': 'סיכום רשת',
     'app_subtitle': 'צור את הדוח החודשי שלך תוך שניות',
+    'app_title_prefix': 'סיכום',
+    'app_title_suffix': 'רשת',
     'drop_label': 'גרור קבצים לכאן או לחץ לבחירה',
     'btn_generate': 'הגדר וצור →',
     'status_loaded': '5 קבצים נטענו — לחץ להגדרה וליצירה',
@@ -1619,6 +1630,7 @@ var TRANSLATIONS = {
     'settings_pm1': 'ממוצע מסגרת ראשונה',
     'settings_proth': 'מכשירי שמיעה (בסיס חודשי)',
     'settings_txe': 'שיעור הצלחת ניסיון (%)',
+    'settings_txc': '% שיעור מימוש',
     'settings_assur': '% ביטוח שמע',
     'settings_ta': '% בדיקת שמיעה',
     'settings_tva': '% מכירה נלווית',
@@ -2761,7 +2773,7 @@ function norm(s) {
 // ── Report HTML builder ───────────────────────────────────────────────────────
 
 // ── Détection de mise à jour (même mécanisme que bilan-passage / observations-terrain) ──
-const APP_VERSION = '2026.09.12-4'; // à bumper avec SW_VERSION dans sw.js à chaque déploiement
+const APP_VERSION = '2026.09.12-5'; // à bumper avec SW_VERSION dans sw.js à chaque déploiement
 
 function checkForUpdate() {
   const updatePending = localStorage.getItem('pedlv_update_pending');
