@@ -498,13 +498,13 @@
   <!-- BOUTON SETTINGS FIXE -->
   <button class="settings-btn" onclick="openSettings()" title="Paramètres objectifs">
     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"></path></svg>
-    Paramètres
+    <span data-i18n="settings_title_short">Paramètres</span>
   </button>
 
   <!-- TITRE -->
   <div class="title-block">
     <h1>Synthèse <span id="easter-egg-podium" onclick="handleEasterEgg()" style="cursor:default;user-select:none;">réseau</span></h1>
-    <p>Générez votre rapport mensuel en quelques secondes</p>
+    <p data-i18n="app_subtitle">Générez votre rapport mensuel en quelques secondes</p>
   </div>
 
   <!-- CARD -->
@@ -517,26 +517,26 @@
       <div class="drop-icon">
         <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
       </div>
-      <div class="drop-title">Glisser les 5 fichiers CSV ici</div>
-      <div class="drop-sub">ou <span>cliquer pour sélectionner</span></div>
+      <div class="drop-title" data-i18n="drop_title">Glisser les 5 fichiers CSV ici</div>
+      <div class="drop-sub"><span data-i18n="drop_or">ou</span> <span data-i18n="drop_click">cliquer pour sélectionner</span></div>
     </div>
 
     <div class="file-legend">
       <div class="file-legend-item">
         <span class="file-legend-dot"></span>
-        <span>Positionnement mensuel par magasin</span>
+        <span data-i18n="file_pos_full">Positionnement mensuel par magasin</span>
       </div>
       <div class="file-legend-item">
         <span class="file-legend-dot"></span>
-        <span>Synthèse des statistiques Optique par collaborateur</span>
+        <span data-i18n="file_stats_opt_full">Synthèse des statistiques Optique par collaborateur</span>
       </div>
       <div class="file-legend-item">
         <span class="file-legend-dot"></span>
-        <span>Synthèse des statistiques Audio par collaborateur</span>
+        <span data-i18n="file_stats_audio_full">Synthèse des statistiques Audio par collaborateur</span>
       </div>
       <div class="file-legend-item">
         <span class="file-legend-dot"></span>
-        <span>Synthèse des CA Audio par collaborateur</span>
+        <span data-i18n="file_ca_audio_full">Synthèse des CA Audio par collaborateur</span>
       </div>
       <div class="file-legend-item">
         <span class="file-legend-dot"></span>
@@ -647,33 +647,32 @@
 <div class="modal-overlay" id="settings-modal">
   <div class="modal">
     <div class="modal-header">
-      <h3>⚙️ Paramètres objectifs</h3>
+      <h3 data-i18n="settings_title">⚙️ Paramètres objectifs</h3>
       <button class="modal-close" onclick="closeSettings()">×</button>
     </div>
     <div class="modal-body">
       <div class="settings-group">
-        <div class="settings-group-title">Animateur réseau</div>
+        <div class="settings-group-title" data-i18n="settings_animateur">Animateur réseau</div>
         <div class="settings-grid">
           <div class="settings-field" style="grid-column:1/-1">
-            <label>Votre nom (affiché sur le rapport)</label>
+            <label data-i18n="settings_nom_label">Votre nom (affiché sur le rapport)</label>
             <input type="text" id="s-animateur" placeholder="Ex: Olivier Baroukh" style="width:100%">
           </div>
         </div>
       </div>
       <div class="settings-group">
-        <div class="settings-group-title">Langue &amp; Devise</div>
+        <div class="settings-group-title" data-i18n="settings_langue">Langue &amp; Devise</div>
         <div class="settings-grid">
           <div class="settings-field">
-            <label>Langue du rapport</label>
+            <label data-i18n="settings_langue_label">Langue du rapport</label>
             <select id="s-lang">
               <option value="fr">🇫🇷 Français</option>
               <option value="en">🇬🇧 English</option>
               <option value="es">🇪🇸 Español</option>
-              <option value="he">🇮🇱 עברית</option>
             </select>
           </div>
           <div class="settings-field">
-            <label>Symbole devise</label>
+            <label data-i18n="settings_devise_label">Symbole devise</label>
             <select id="s-currency">
               <option value="€">€ — Euro</option>
               <option value="$">$ — Dollar</option>
@@ -683,24 +682,24 @@
             </select>
           </div>
           <div class="settings-field-row">
-            <div class="settings-field"><label>Objectif CA collaborateur (en k)</label><input type="number" id="s-obj-ca" min="1"></div>
-            <div class="settings-field"><label>Seuil alerte RAF/jour — auto si vide</label><input type="number" id="s-raf-seuil" min="0" step="0.5" placeholder="auto"></div>
+            <div class="settings-field"><label data-i18n="settings_obj_ca">Objectif CA collaborateur (en k)</label><input type="number" id="s-obj-ca" min="1"></div>
+            <div class="settings-field"><label data-i18n="settings_raf_seuil">Seuil alerte RAF/jour — auto si vide</label><input type="number" id="s-raf-seuil" min="0" step="0.5" placeholder="auto"></div>
             <select class="prio-select" id="sp-obj-ca" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div style="margin-top:12px;padding:10px 12px;background:rgba(255,255,255,0.03);border-radius:8px;border:1px solid rgba(255,255,255,0.07)">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-              <span style="font-size:12px;color:#888780">Nb max d'actions prioritaires</span>
+              <span style="font-size:12px;color:#888780" data-i18n="settings_max_prio">Nb max d'actions prioritaires</span>
               <span id="max-prio-val" style="font-size:15px;font-weight:700;color:#CC1719">9</span>
             </div>
             <input type="range" id="s-max-prio" min="3" max="9" step="1" value="9" oninput="document.getElementById('max-prio-val').textContent=this.value" style="width:100%;accent-color:#CC1719">
             <div style="display:flex;justify-content:space-between;font-size:10px;color:#3a3937;margin-top:3px"><span>3</span><span>6</span><span>9</span></div>
           </div>
           <div style="margin-top:12px;padding:10px 12px;background:rgba(255,255,255,0.03);border-radius:8px;border:1px solid rgba(255,255,255,0.07);display:flex;justify-content:space-between;align-items:center">
-            <span style="font-size:12px;color:#888780">Mode rapport</span>
+            <span style="font-size:12px;color:#888780" data-i18n="settings_mode">Mode rapport</span>
             <div style="display:flex;align-items:center;gap:8px">
-              <span style="font-size:11px;color:#5F5E5A" id="dark-mode-label">Clair</span>
+              <span style="font-size:11px;color:#5F5E5A" id="dark-mode-label" data-i18n="settings_clair">Clair</span>
               <label style="position:relative;display:inline-block;width:40px;height:22px;cursor:pointer">
-                <input type="checkbox" id="s-dark-mode" style="opacity:0;width:0;height:0" onchange="document.getElementById('dark-mode-label').textContent=this.checked?'Sombre':'Clair';var k=document.getElementById('dark-toggle-knob');var bg=document.getElementById('dark-toggle-bg');if(k){k.style.transform=this.checked?'translateX(18px)':'';k.style.background=this.checked?'#CC1719':'#888780';}if(bg){bg.style.background=this.checked?'rgba(204,23,25,0.2)':'#2C2C2A';}">
+                <input type="checkbox" id="s-dark-mode" style="opacity:0;width:0;height:0" onchange="document.getElementById('dark-mode-label').textContent=this.checked?tr('settings_sombre'):tr('settings_clair');var k=document.getElementById('dark-toggle-knob');var bg=document.getElementById('dark-toggle-bg');if(k){k.style.transform=this.checked?'translateX(18px)':'';k.style.background=this.checked?'#CC1719':'#888780';}if(bg){bg.style.background=this.checked?'rgba(204,23,25,0.2)':'#2C2C2A';}">
                 <span id="dark-toggle-bg" style="position:absolute;inset:0;background:#2C2C2A;border-radius:22px;transition:.3s;border:1px solid #3C3C3A"></span>
                 <span id="dark-toggle-knob" style="position:absolute;height:16px;width:16px;left:3px;top:3px;background:#888780;border-radius:50%;transition:.3s"></span>
               </label>
@@ -709,51 +708,51 @@
         </div>
       </div>
       <div class="settings-group">
-        <div class="settings-group-title">Optique — objectifs</div>
+        <div class="settings-group-title" data-i18n="settings_optique">Optique — objectifs</div>
         <div class="settings-grid">
           <div class="settings-field-row">
-            <div class="settings-field"><label>Nb ventes (base mois)</label><input type="number" id="s-nb" min="1"></div>
+            <div class="settings-field"><label data-i18n="settings_nb_ventes">Nb ventes (base mois)</label><input type="number" id="s-nb" min="1"></div>
             <select class="prio-select" id="sp-nb" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
-            <div class="settings-field"><label>Panier moyen (PM)</label><input type="number" id="s-pm" min="1"></div>
+            <div class="settings-field"><label data-i18n="settings_pm">Panier moyen (PM)</label><input type="number" id="s-pm" min="1"></div>
             <select class="prio-select" id="sp-pm" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
-            <div class="settings-field"><label>% SOP</label><input type="number" id="s-sop" min="0" max="100"></div>
+            <div class="settings-field"><label data-i18n="settings_sop">% SOP</label><input type="number" id="s-sop" min="0" max="100"></div>
             <select class="prio-select" id="sp-sop" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
-            <div class="settings-field"><label>% TC</label><input type="number" id="s-tc" min="0" max="100"></div>
+            <div class="settings-field"><label data-i18n="settings_tc">% TC</label><input type="number" id="s-tc" min="0" max="100"></div>
             <select class="prio-select" id="sp-tc" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
-            <div class="settings-field"><label>% Pack</label><input type="number" id="s-pack" min="0" max="100"></div>
+            <div class="settings-field"><label data-i18n="settings_pack">% Pack</label><input type="number" id="s-pack" min="0" max="100"></div>
             <select class="prio-select" id="sp-pack" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
-            <div class="settings-field"><label>% MdC</label><input type="number" id="s-mdc" min="0" max="100"></div>
+            <div class="settings-field"><label data-i18n="settings_mdc">% MdC</label><input type="number" id="s-mdc" min="0" max="100"></div>
             <select class="prio-select" id="sp-mdc" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
-            <div class="settings-field"><label>% LUKKAS</label><input type="number" id="s-luk" min="0" max="100"></div>
+            <div class="settings-field"><label data-i18n="settings_luk">% LUKKAS</label><input type="number" id="s-luk" min="0" max="100"></div>
             <select class="prio-select" id="sp-luk" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
-            <div class="settings-field"><label>PM Pack Confort</label><input type="number" id="s-pmpc" min="0"></div>
+            <div class="settings-field"><label data-i18n="settings_pmpc">PM Pack Confort</label><input type="number" id="s-pmpc" min="0"></div>
             <select class="prio-select" id="sp-pmpc" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
-            <div class="settings-field"><label>PM 1ère paire</label><input type="number" id="s-pm1" min="0"></div>
+            <div class="settings-field"><label data-i18n="settings_pm1">PM 1ère paire</label><input type="number" id="s-pm1" min="0"></div>
             <select class="prio-select" id="sp-pm1" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
         </div>
       </div>
       <div class="settings-group">
-        <div class="settings-group-title">Audio — objectifs</div>
+        <div class="settings-group-title" data-i18n="settings_audio">Audio — objectifs</div>
         <div class="settings-grid">
           <div class="settings-field-row">
-            <div class="settings-field"><label>Prothèses (base mois)</label><input type="number" id="s-proth" min="1"></div>
+            <div class="settings-field"><label data-i18n="settings_proth">Prothèses (base mois)</label><input type="number" id="s-proth" min="1"></div>
             <select class="prio-select" id="sp-proth" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
@@ -761,62 +760,62 @@
             <select class="prio-select" id="sp-txc" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
-            <div class="settings-field"><label>% Taux réussite essai</label><input type="number" id="s-txe" min="0" max="100"></div>
+            <div class="settings-field"><label data-i18n="settings_txe">% Taux réussite essai</label><input type="number" id="s-txe" min="0" max="100"></div>
             <select class="prio-select" id="sp-txe" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
-            <div class="settings-field"><label>% Assurance</label><input type="number" id="s-assur" min="0" max="100"></div>
+            <div class="settings-field"><label data-i18n="settings_assur">% Assurance</label><input type="number" id="s-assur" min="0" max="100"></div>
             <select class="prio-select" id="sp-assur" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
-            <div class="settings-field"><label>% Test auditif</label><input type="number" id="s-ta" min="0" max="100"></div>
+            <div class="settings-field"><label data-i18n="settings_ta">% Test auditif</label><input type="number" id="s-ta" min="0" max="100"></div>
             <select class="prio-select" id="sp-ta" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
-            <div class="settings-field"><label>% Vente additionnelle</label><input type="number" id="s-tva" min="0" max="100"></div>
+            <div class="settings-field"><label data-i18n="settings_tva">% Vente additionnelle</label><input type="number" id="s-tva" min="0" max="100"></div>
             <select class="prio-select" id="sp-tva" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
-            <div class="settings-field"><label>PM vente audio</label><input type="number" id="s-pm-aud" min="0"></div>
+            <div class="settings-field"><label data-i18n="settings_pm_aud">PM vente audio</label><input type="number" id="s-pm-aud" min="0"></div>
             <select class="prio-select" id="sp-pm_aud" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
           <div class="settings-field-row">
-            <div class="settings-field"><label>PM par prothèse</label><input type="number" id="s-pm-app" min="0"></div>
+            <div class="settings-field"><label data-i18n="settings_pm_app">PM par prothèse</label><input type="number" id="s-pm-app" min="0"></div>
             <select class="prio-select" id="sp-pm_app" title="Priorité"><option value="1">P1</option><option value="2" selected="">P2</option><option value="3">P3</option></select>
           </div>
         </div>
       </div>
     </div>
       <div class="settings-group">
-        <div class="settings-group-title">Colonnes du tableau — Optique</div>
-        <div style="font-size:10px;color:#5F5E5A;margin-bottom:8px">CA généré · Nb ventes · toujours visibles</div>
+        <div class="settings-group-title" data-i18n="settings_cols_opt">Colonnes du tableau — Optique</div>
+        <div style="font-size:10px;color:#5F5E5A;margin-bottom:8px" data-i18n="cols_opt_hint">CA généré · Nb ventes · toujours visibles</div>
         <div class="settings-grid">
-          <label class="col-check"><input type="checkbox" id="col-pm"> Panier moyen (PM)</label>
-          <label class="col-check"><input type="checkbox" id="col-tc"> % TC</label>
-          <label class="col-check"><input type="checkbox" id="col-sop"> % SOP</label>
-          <label class="col-check"><input type="checkbox" id="col-pack"> % Pack Confort</label>
-          <label class="col-check"><input type="checkbox" id="col-pmpc"> PM Pack Confort</label>
-          <label class="col-check"><input type="checkbox" id="col-pm1"> PM 1ère paire</label>
-          <label class="col-check"><input type="checkbox" id="col-mdc"> % MdC</label>
-          <label class="col-check"><input type="checkbox" id="col-luk"> % LUKKAS</label>
+          <label class="col-check"><input type="checkbox" id="col-pm"> <span data-i18n="settings_pm">Panier moyen (PM)</span></label>
+          <label class="col-check"><input type="checkbox" id="col-tc"> <span data-i18n="settings_tc">% TC</span></label>
+          <label class="col-check"><input type="checkbox" id="col-sop"> <span data-i18n="settings_sop">% SOP</span></label>
+          <label class="col-check"><input type="checkbox" id="col-pack"> <span data-i18n="settings_pack">% Pack Confort</span></label>
+          <label class="col-check"><input type="checkbox" id="col-pmpc"> <span data-i18n="settings_pmpc">PM Pack Confort</span></label>
+          <label class="col-check"><input type="checkbox" id="col-pm1"> <span data-i18n="settings_pm1">PM 1ère paire</span></label>
+          <label class="col-check"><input type="checkbox" id="col-mdc"> <span data-i18n="settings_mdc">% MdC</span></label>
+          <label class="col-check"><input type="checkbox" id="col-luk"> <span data-i18n="settings_luk">% LUKKAS</span></label>
         </div>
       </div>
       <div class="settings-group">
-        <div class="settings-group-title">Colonnes du tableau — Audio</div>
-        <div style="font-size:10px;color:#5F5E5A;margin-bottom:8px">Prothèses · Test auditif · toujours visibles</div>
+        <div class="settings-group-title" data-i18n="settings_cols_aud">Colonnes du tableau — Audio</div>
+        <div style="font-size:10px;color:#5F5E5A;margin-bottom:8px" data-i18n="cols_aud_hint">Prothèses · Test auditif · toujours visibles</div>
         <div class="settings-grid">
           <label class="col-check"><input type="checkbox" id="col-txc"> % Tx concrétisation</label>
-          <label class="col-check"><input type="checkbox" id="col-txe"> % Tx réussite essai</label>
-          <label class="col-check"><input type="checkbox" id="col-assur"> % Assurance</label>
-          <label class="col-check"><input type="checkbox" id="col-tva"> % Vente additionnelle</label>
+          <label class="col-check"><input type="checkbox" id="col-txe"> <span data-i18n="settings_txe">% Tx réussite essai</span></label>
+          <label class="col-check"><input type="checkbox" id="col-assur"> <span data-i18n="settings_assur">% Assurance</span></label>
+          <label class="col-check"><input type="checkbox" id="col-tva"> <span data-i18n="settings_tva">% Vente additionnelle</span></label>
         </div>
       </div>
     </div>
 
     <div class="modal-footer">
-      <span class="settings-saved" id="settings-saved">✓ Sauvegardé</span>
-      <button class="btn-reset" onclick="resetSettings()">Réinitialiser</button>
-      <button class="btn-save" onclick="saveSettings()">Enregistrer</button>
+      <span class="settings-saved" id="settings-saved" data-i18n="settings_saved">✓ Sauvegardé</span>
+      <button class="btn-reset" onclick="resetSettings()" data-i18n="btn_reset">Réinitialiser</button>
+      <button class="btn-save" onclick="saveSettings()" data-i18n="btn_save">Enregistrer</button>
     </div>
   </div>
 
@@ -865,8 +864,6 @@ var TRANSLATIONS = {
     'ca_audio': 'CA Audio',
     'raf_jour': 'RAF / jour global',
     'jours_restants': 'j. restants',
-    'avg_short': 'moy.',
-    'dernier_jour': 'dernier jour',
     'col_collaborateur': 'Collaborateur',
     'col_tps_trav': 'Tps trav.',
     'col_tps_trav_sub': 'temps travail',
@@ -875,7 +872,6 @@ var TRANSLATIONS = {
     'col_raf_indiv': 'RAF/jour',
     'col_raf_indiv_sub': 'objectif indiv.',
     'col_nb': 'Nb ventes',
-    'col_nb_net': 'par effectif',
     'col_pm': 'PM',
     'col_sop': '% SOP',
     'col_tc': '% TC',
@@ -884,9 +880,6 @@ var TRANSLATIONS = {
     'col_proth': 'Prothèses',
     'col_pm_aud': 'PM vente',
     'col_pm_app': 'PM prothèse',
-    'col_txc': 'Tx concret.',
-    'col_raf_no_indiv': 'Pas d\'objectifs indiv. CA',
-    'kpi_pos_n': 'moy. {n} magasin{s}',
     'col_txe': 'Tx réussite',
     'col_assur': '% Assur.',
     'col_tva': '% Vente Add.',
@@ -899,14 +892,9 @@ var TRANSLATIONS = {
     'leg_obj0': '< 70%',
     'leg_commun': 'Indicateur commun',
     'leg_audio': 'Colonnes audio',
-    'leg_aud_note': '{essais} = dossiers déjà lancés à amener à 95% · {nvx} = 1 dossier = 2 prothèses à 95% · PM cible calculé sur les nouveaux dossiers',
-    'leg_proj_note': '{ca_proj} · PM cible calculé sur les nouvelles ventes',
     'leg_prio_note': 'P1 Urgent · P2 À traiter · P3 À surveiller · Objectifs proratisés sur',
     'leg_jours_ouvres': 'j. ouvrés',
     'actifs_uniquement': 'Collaborateurs actifs uniquement',
-    'magasins_actifs': 'Magasins actifs',
-    'col_pct_obj': '% obj.',
-    'col_raf_j': 'RAF/j',
     'obj_proratises': 'Objectifs proratisés',
     'audio_uniquement': 'Audio uniquement',
     'top3_title': 'TOP 3 — SCORE GLOBAL',
@@ -937,8 +925,6 @@ var TRANSLATIONS = {
     'col_total_ventes': 'Total ventes conséquence',
     'col_proth_real': 'Prothèses réalisées',
     'col_pm_vente_aud': 'PM vente {currency}/vente',
-    'unit_sale': 'vente',
-    'unit_device': 'app.',
     'col_pm_proth': 'PM prothèse {currency}/app.',
     'col_essais': 'Essais en cours à concrétiser',
     'col_nvx_dossiers': 'Nouveaux dossiers à lancer',
@@ -979,9 +965,10 @@ var TRANSLATIONS = {
     'felicitation_sop': 'au top',
     'felicitation_pm': 'toute l\'équipe au vert',
     'nouveau_mois': 'Nouveau mois — nouveau depart !',
-    'obj_en_bonne_voie': tr('obj_en_bonne_voie'),
-    'trajectoire_positive': tr('trajectoire_positive'),
+    'obj_en_bonne_voie': 'Objectifs en bonne voie',
+    'trajectoire_positive': 'La trajectoire est positive. Restez concentrés sur les indicateurs qualitatifs pour transformer cette bonne performance en excellence.',
     'settings_title': 'Paramètres objectifs',
+    'settings_title_short': 'Paramètres',
     'settings_animateur': 'Animateur réseau',
     'settings_nom_label': 'Votre nom (affiché sur le rapport)',
     'settings_langue': 'Langue & Devise',
@@ -1014,6 +1001,34 @@ var TRANSLATIONS = {
     'settings_pm_aud': 'PM vente audio',
     'settings_pm_app': 'PM prothèse',
     'settings_prio_label': 'Priorité',
+    'avg_short': 'moy.',
+    'col_nb_net': 'par effectif',
+    'col_pct_obj': '% obj.',
+    'col_raf_j': 'RAF/j',
+    'col_raf_no_indiv': 'Pas d\\\'objectifs indiv. CA',
+    'col_txc': 'Tx concret.',
+    'dernier_jour': 'dernier jour',
+    'kpi_pos_n': 'moy. {n} magasin{s}',
+    'leg_aud_note': '{essais} = dossiers déjà lancés à amener à 95% · {nvx} = 1 dossier = 2 prothèses à 95% · PM cible calculé sur les nouveaux dossiers',
+    'leg_proj_note': '{ca_proj} · PM cible calculé sur les nouvelles ventes',
+    'magasins_actifs': 'Magasins actifs',
+    'unit_device': 'app.',
+    'unit_sale': 'vente',
+    'prio_txe_title': 'Tx réussite essai — sous objectif {obj}%',
+    'rapport_pret': 'Rapport prêt',
+    'print_button': 'Imprimer / Enregistrer PDF',
+    'btn_reset': 'Réinitialiser',
+    'btn_save': 'Enregistrer',
+    'settings_saved': '✓ Sauvegardé',
+    'cols_opt_hint': 'CA généré · Nb ventes · toujours visibles',
+    'cols_aud_hint': 'Prothèses · Test auditif · toujours visibles',
+    'drop_title': 'Glisser les 5 fichiers CSV ici',
+    'drop_or': 'ou',
+    'drop_click': 'cliquer pour sélectionner',
+    'file_pos_full': 'Positionnement mensuel par magasin',
+    'file_stats_opt_full': 'Synthèse des statistiques Optique par collaborateur',
+    'file_stats_audio_full': 'Synthèse des statistiques Audio par collaborateur',
+    'file_ca_audio_full': 'Synthèse des CA Audio par collaborateur',
   },
   en: {
     'app_title': 'Network Summary',
@@ -1056,8 +1071,6 @@ var TRANSLATIONS = {
     'ca_audio': 'Audio revenue',
     'raf_jour': 'Daily target remaining',
     'jours_restants': 'days remaining',
-    'avg_short': 'avg.',
-    'dernier_jour': 'last day',
     'col_collaborateur': 'Staff member',
     'col_tps_trav': 'Work time',
     'col_tps_trav_sub': 'work time',
@@ -1066,7 +1079,6 @@ var TRANSLATIONS = {
     'col_raf_indiv': 'Daily target',
     'col_raf_indiv_sub': 'indiv. target',
     'col_nb': 'Sales',
-    'col_nb_net': 'per headcount',
     'col_pm': 'Avg. basket',
     'col_sop': '% Warranty',
     'col_tc': '% Conv.',
@@ -1075,9 +1087,6 @@ var TRANSLATIONS = {
     'col_proth': 'Hearing aids',
     'col_pm_aud': 'Sale avg.',
     'col_pm_app': 'Device avg.',
-    'col_txc': 'Conv. rate',
-    'col_raf_no_indiv': 'No indiv. revenue targets',
-    'kpi_pos_n': '{n} store avg.',
     'col_txe': 'Trial rate',
     'col_assur': '% Insurance',
     'col_tva': '% Add-on',
@@ -1090,14 +1099,9 @@ var TRANSLATIONS = {
     'leg_obj0': '< 70%',
     'leg_commun': 'Common indicator',
     'leg_audio': 'Audio columns',
-    'leg_aud_note': '{essais} = ongoing trials to bring to 95% · {nvx} = 1 file = 2 hearing aids at 95% · Target avg. calculated on new files',
-    'leg_proj_note': '{ca_proj} · Target avg. calculated on new sales',
     'leg_prio_note': 'P1 Urgent · P2 To action · P3 Monitor · Prorated targets over',
     'leg_jours_ouvres': 'working days',
     'actifs_uniquement': 'Active staff only',
-    'magasins_actifs': 'Active stores',
-    'col_pct_obj': '% target',
-    'col_raf_j': 'Daily target',
     'obj_proratises': 'Prorated targets',
     'audio_uniquement': 'Audio only',
     'top3_title': 'TOP 3 — OVERALL SCORE',
@@ -1128,8 +1132,6 @@ var TRANSLATIONS = {
     'col_total_ventes': 'Total sales (outcome)',
     'col_proth_real': 'Hearing aids achieved',
     'col_pm_vente_aud': 'Sale avg. {currency}/sale',
-    'unit_sale': 'sale',
-    'unit_device': 'device',
     'col_pm_proth': 'Device avg. {currency}/device',
     'col_essais': 'Trials to convert',
     'col_nvx_dossiers': 'New files to open',
@@ -1173,6 +1175,7 @@ var TRANSLATIONS = {
     'obj_en_bonne_voie': 'Targets on track',
     'trajectoire_positive': 'The trajectory is positive. Stay focused on quality indicators to turn this good performance into excellence.',
     'settings_title': 'Target settings',
+    'settings_title_short': 'Settings',
     'settings_animateur': 'Network manager',
     'settings_nom_label': 'Your name (shown on report)',
     'settings_langue': 'Language & Currency',
@@ -1205,6 +1208,34 @@ var TRANSLATIONS = {
     'settings_pm_aud': 'Hearing sale avg.',
     'settings_pm_app': 'Device avg.',
     'settings_prio_label': 'Priority',
+    'avg_short': 'avg.',
+    'col_nb_net': 'per headcount',
+    'col_pct_obj': '% target',
+    'col_raf_j': 'Daily target',
+    'col_raf_no_indiv': 'No indiv. revenue targets',
+    'col_txc': 'Conv. rate',
+    'dernier_jour': 'last day',
+    'kpi_pos_n': '{n} store avg.',
+    'leg_aud_note': '{essais} = ongoing trials to bring to 95% · {nvx} = 1 file = 2 hearing aids at 95% · Target avg. calculated on new files',
+    'leg_proj_note': '{ca_proj} · Target avg. calculated on new sales',
+    'magasins_actifs': 'Active stores',
+    'unit_device': 'device',
+    'unit_sale': 'sale',
+    'prio_txe_title': 'Trial success rate — below target {obj}%',
+    'rapport_pret': 'Report ready',
+    'print_button': 'Print / Save PDF',
+    'btn_reset': 'Reset',
+    'btn_save': 'Save',
+    'settings_saved': '✓ Saved',
+    'cols_opt_hint': 'Revenue generated · Sales — always visible',
+    'cols_aud_hint': 'Hearing aids · Hearing test — always visible',
+    'drop_title': 'Drop the 5 CSV files here',
+    'drop_or': 'or',
+    'drop_click': 'click to select',
+    'file_pos_full': 'Monthly positioning per store',
+    'file_stats_opt_full': 'Optical stats summary per staff member',
+    'file_stats_audio_full': 'Audio stats summary per staff member',
+    'file_ca_audio_full': 'Audio revenue summary per staff member',
   },
   es: {
     'app_title': 'Resumen de red',
@@ -1247,8 +1278,6 @@ var TRANSLATIONS = {
     'ca_audio': 'Facturación audio',
     'raf_jour': 'RAF / día global',
     'jours_restants': 'días restantes',
-    'avg_short': 'med.',
-    'dernier_jour': 'último día',
     'col_collaborateur': 'Colaborador',
     'col_tps_trav': 'T. trabajo',
     'col_tps_trav_sub': 'tiempo trabajo',
@@ -1257,7 +1286,6 @@ var TRANSLATIONS = {
     'col_raf_indiv': 'RAF/día',
     'col_raf_indiv_sub': 'obj. indiv.',
     'col_nb': 'Nº ventas',
-    'col_nb_net': 'por efectivo',
     'col_pm': 'PM',
     'col_sop': '% Garantía',
     'col_tc': '% Conv.',
@@ -1266,9 +1294,6 @@ var TRANSLATIONS = {
     'col_proth': 'Audífonos',
     'col_pm_aud': 'PM venta',
     'col_pm_app': 'PM audífono',
-    'col_txc': 'Tasa concr.',
-    'col_raf_no_indiv': 'Sin objetivos CA indiv.',
-    'kpi_pos_n': 'prom. {n} tienda{s}',
     'col_txe': 'Tasa éxito',
     'col_assur': '% Seguro',
     'col_tva': '% Venta Ad.',
@@ -1281,14 +1306,9 @@ var TRANSLATIONS = {
     'leg_obj0': '< 70%',
     'leg_commun': 'Indicador común',
     'leg_audio': 'Columnas audio',
-    'leg_aud_note': '{essais} = ensayos en curso a llevar al 95% · {nvx} = 1 expediente = 2 audífonos al 95% · PM cible calculada sobre los nuevos expedientes',
-    'leg_proj_note': '{ca_proj} · PM objetivo calculada sobre las nuevas ventas',
     'leg_prio_note': 'P1 Urgente · P2 Atender · P3 Vigilar · Objetivos prorrateados',
     'leg_jours_ouvres': 'días hábiles',
     'actifs_uniquement': 'Solo colaboradores activos',
-    'magasins_actifs': 'Tiendas activas',
-    'col_pct_obj': '% obj.',
-    'col_raf_j': 'RAF/día',
     'obj_proratises': 'Objetivos prorrateados',
     'audio_uniquement': 'Solo audio',
     'top3_title': 'TOP 3 — PUNTUACIÓN GLOBAL',
@@ -1319,8 +1339,6 @@ var TRANSLATIONS = {
     'col_total_ventes': 'Total ventas (consecuencia)',
     'col_proth_real': 'Audífonos realizados',
     'col_pm_vente_aud': 'PM venta {currency}/venta',
-    'unit_sale': 'venta',
-    'unit_device': 'aparato',
     'col_pm_proth': 'PM audífono {currency}/aparato',
     'col_essais': 'Pruebas a concretar',
     'col_nvx_dossiers': 'Nuevos expedientes',
@@ -1364,6 +1382,7 @@ var TRANSLATIONS = {
     'obj_en_bonne_voie': 'Objetivos en buen camino',
     'trajectoire_positive': 'La trayectoria es positiva. Mantengan el foco en los indicadores cualitativos para transformar este buen rendimiento en excelencia.',
     'settings_title': 'Configuración objetivos',
+    'settings_title_short': 'Ajustes',
     'settings_animateur': 'Responsable de red',
     'settings_nom_label': 'Tu nombre (mostrado en el informe)',
     'settings_langue': 'Idioma y Divisa',
@@ -1396,6 +1415,34 @@ var TRANSLATIONS = {
     'settings_pm_aud': 'PM venta audio',
     'settings_pm_app': 'PM audífono',
     'settings_prio_label': 'Prioridad',
+    'avg_short': 'med.',
+    'col_nb_net': 'por efectivo',
+    'col_pct_obj': '% obj.',
+    'col_raf_j': 'RAF/día',
+    'col_raf_no_indiv': 'Sin objetivos CA indiv.',
+    'col_txc': 'Tasa concr.',
+    'dernier_jour': 'último día',
+    'kpi_pos_n': 'prom. {n} tienda{s}',
+    'leg_aud_note': '{essais} = ensayos en curso a llevar al 95% · {nvx} = 1 expediente = 2 audífonos al 95% · PM cible calculada sobre los nuevos expedientes',
+    'leg_proj_note': '{ca_proj} · PM objetivo calculada sobre las nuevas ventas',
+    'magasins_actifs': 'Tiendas activas',
+    'unit_device': 'aparato',
+    'unit_sale': 'venta',
+    'prio_txe_title': 'Tasa de éxito prueba — bajo objetivo {obj}%',
+    'rapport_pret': 'Informe listo',
+    'print_button': 'Imprimir / Guardar PDF',
+    'btn_reset': 'Restablecer',
+    'btn_save': 'Guardar',
+    'settings_saved': '✓ Guardado',
+    'cols_opt_hint': 'Facturación generada · Nº ventas · siempre visibles',
+    'cols_aud_hint': 'Audífonos · Test auditivo · siempre visibles',
+    'drop_title': 'Suelta los 5 archivos CSV aquí',
+    'drop_or': 'o',
+    'drop_click': 'haz clic para seleccionar',
+    'file_pos_full': 'Posicionamiento mensual por tienda',
+    'file_stats_opt_full': 'Resumen de estadísticas Óptica por colaborador',
+    'file_stats_audio_full': 'Resumen de estadísticas Audio por colaborador',
+    'file_ca_audio_full': 'Resumen de facturación Audio por colaborador',
   },
   he: {
     'app_title': 'סיכום רשת',
@@ -1438,8 +1485,6 @@ var TRANSLATIONS = {
     'ca_audio': 'מחזור שמע',
     'raf_jour': 'יעד יומי נותר',
     'jours_restants': 'ימים נותרו',
-    'avg_short': 'ממוצע',
-    'dernier_jour': 'יום אחרון',
     'col_collaborateur': 'עובד',
     'col_tps_trav': 'זמן עבודה',
     'col_tps_trav_sub': 'זמן עבודה',
@@ -1448,7 +1493,6 @@ var TRANSLATIONS = {
     'col_raf_indiv': 'יעד יומי',
     'col_raf_indiv_sub': 'יעד אישי',
     'col_nb': 'מכירות',
-    'col_nb_net': 'לנפש',
     'col_pm': 'ממוצע סל',
     'col_sop': '% אחריות',
     'col_tc': '% המרה',
@@ -1457,9 +1501,6 @@ var TRANSLATIONS = {
     'col_proth': 'מכשירי שמיעה',
     'col_pm_aud': 'ממוצע מכירה',
     'col_pm_app': 'ממוצע מכשיר',
-    'col_txc': 'שיעור מימוש',
-    'col_raf_no_indiv': 'ללא יעדי מחזור אישיים',
-    'kpi_pos_n': 'ממוצע {n} חנות',
     'col_txe': 'שיעור הצלחה',
     'col_assur': '% ביטוח',
     'col_tva': '% מכירה נלווית',
@@ -1472,14 +1513,9 @@ var TRANSLATIONS = {
     'leg_obj0': '< 70%',
     'leg_commun': 'מדד משותף',
     'leg_audio': 'עמודות שמע',
-    'leg_aud_note': '{essais} = ניסיונות פעילים להביא ל-95% · {nvx} = תיק 1 = 2 מכשירים ב-95% · ממוצע יעד מחושב על תיקים חדשים',
-    'leg_proj_note': '{ca_proj} · ממוצע יעד מחושב על מכירות חדשות',
     'leg_prio_note': 'P1 דחוף · P2 לטיפול · P3 למעקב · יעדים יחסיים לפי',
     'leg_jours_ouvres': 'ימי עבודה',
     'actifs_uniquement': 'עובדים פעילים בלבד',
-    'magasins_actifs': 'חנויות פעילות',
-    'col_pct_obj': '% יעד',
-    'col_raf_j': 'יעד/יום',
     'obj_proratises': 'יעדים יחסיים',
     'audio_uniquement': 'שמע בלבד',
     'top3_title': 'TOP 3 — ציון כולל',
@@ -1510,8 +1546,6 @@ var TRANSLATIONS = {
     'col_total_ventes': 'סה"כ מכירות (תוצאה)',
     'col_proth_real': 'מכשירי שמיעה בוצעו',
     'col_pm_vente_aud': 'ממוצע מכירה {currency}/מכירה',
-    'unit_sale': 'מכירה',
-    'unit_device': 'מכשיר',
     'col_pm_proth': 'ממוצע מכשיר {currency}/מכשיר',
     'col_essais': 'ניסויים להמרה',
     'col_nvx_dossiers': 'תיקים חדשים לפתיחה',
@@ -1555,6 +1589,7 @@ var TRANSLATIONS = {
     'obj_en_bonne_voie': 'יעדים על המסלול',
     'trajectoire_positive': 'המגמה חיובית. הישארו ממוקדים במדדים האיכותיים כדי להפוך את הביצועים הטובים למצוינות.',
     'settings_title': 'הגדרות יעדים',
+    'settings_title_short': 'הגדרות',
     'settings_animateur': 'מנהל רשת',
     'settings_nom_label': 'שמך (יוצג בדוח)',
     'settings_langue': 'שפה ומטבע',
@@ -1587,6 +1622,34 @@ var TRANSLATIONS = {
     'settings_pm_aud': 'ממוצע מכירת שמע',
     'settings_pm_app': 'ממוצע מכשיר',
     'settings_prio_label': 'עדיפות',
+    'avg_short': 'ממוצע',
+    'col_nb_net': 'לנפש',
+    'col_pct_obj': '% יעד',
+    'col_raf_j': 'יעד/יום',
+    'col_raf_no_indiv': 'ללא יעדי מחזור אישיים',
+    'col_txc': 'שיעור מימוש',
+    'dernier_jour': 'יום אחרון',
+    'kpi_pos_n': 'ממוצע {n} חנות',
+    'leg_aud_note': '{essais} = ניסיונות פעילים להביא ל-95% · {nvx} = תיק 1 = 2 מכשירים ב-95% · ממוצע יעד מחושב על תיקים חדשים',
+    'leg_proj_note': '{ca_proj} · ממוצע יעד מחושב על מכירות חדשות',
+    'magasins_actifs': 'חנויות פעילות',
+    'unit_device': 'מכשיר',
+    'unit_sale': 'מכירה',
+    'prio_txe_title': 'שיעור הצלחת ניסיון — מתחת ליעד {obj}%',
+    'rapport_pret': 'הדוח מוכן',
+    'print_button': 'הדפס / שמור כ-PDF',
+    'btn_reset': 'איפוס',
+    'btn_save': 'שמור',
+    'settings_saved': '✓ נשמר',
+    'cols_opt_hint': 'מחזור שנוצר · מספר מכירות · תמיד גלוי',
+    'cols_aud_hint': 'מכשירי שמיעה · בדיקת שמיעה · תמיד גלוי',
+    'drop_title': 'גרור לכאן את 5 קובצי ה-CSV',
+    'drop_or': 'או',
+    'drop_click': 'לחץ לבחירה',
+    'file_pos_full': 'מיצוב חודשי לפי חנות',
+    'file_stats_opt_full': 'סיכום סטטיסטיקות אופטיקה לפי עובד',
+    'file_stats_audio_full': 'סיכום סטטיסטיקות שמע לפי עובד',
+    'file_ca_audio_full': 'סיכום מחזור שמע לפי עובד',
   },
 };
 
@@ -1606,6 +1669,18 @@ function tr(key, vars) {
   }
   return text;
 }
+
+// Câblage i18n → DOM (17/09) : applique tr() à tous les éléments [data-i18n]
+// de la page statique. À appeler au chargement et juste après tout changement
+// de langue (saveSettings) pour un effet immédiat, sans recharger la page.
+function applyI18n() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    el.textContent = tr(el.getAttribute('data-i18n'))
+  })
+  document.documentElement.lang = (JSON.parse(localStorage.getItem('oc_settings')||'{}').lang) || 'fr'
+}
+document.addEventListener('DOMContentLoaded', applyI18n)
+
 
 window.onerror = function(msg, src, line, col, err) {
     document.body.insertAdjacentHTML('afterbegin', 
@@ -1637,7 +1712,7 @@ function openSettings() {
   document.getElementById('s-obj-ca').value   = s.obj_ca
   document.getElementById('s-raf-seuil').value = s.raf_seuil || ''
   const mpEl = document.getElementById('s-max-prio'); if(mpEl){ mpEl.value = s.max_prio || 9; document.getElementById('max-prio-val').textContent = s.max_prio || 9; }
-  const dmEl = document.getElementById('s-dark-mode'); if(dmEl){ dmEl.checked = !!s.dark_mode; document.getElementById('dark-mode-label').textContent = s.dark_mode ? 'Sombre' : 'Clair'; var k=document.getElementById('dark-toggle-knob'); if(k){k.style.transform=s.dark_mode?'translateX(18px)':'';k.style.background=s.dark_mode?'#CC1719':'#888780';} }
+  const dmEl = document.getElementById('s-dark-mode'); if(dmEl){ dmEl.checked = !!s.dark_mode; document.getElementById('dark-mode-label').textContent = s.dark_mode ? tr('settings_sombre') : tr('settings_clair'); var k=document.getElementById('dark-toggle-knob'); if(k){k.style.transform=s.dark_mode?'translateX(18px)':'';k.style.background=s.dark_mode?'#CC1719':'#888780';} }
   // Synchro jours (depuis la page d'accueil)
   const je = parseInt(document.getElementById('jours-ecoules').value) || s.jours_ecoules
   const jm = parseInt(document.getElementById('jours-mois').value)    || s.jours_mois
@@ -1718,6 +1793,7 @@ function saveSettings() {
     })),
   }
   localStorage.setItem('oc_settings', JSON.stringify(s))
+  applyI18n()
   const el = document.getElementById('settings-saved')
   el.classList.add('show')
   setTimeout(() => { el.classList.remove('show'); closeSettings() }, 1200)
@@ -2682,7 +2758,7 @@ function norm(s) {
 // ── Report HTML builder ───────────────────────────────────────────────────────
 
 // ── Détection de mise à jour (même mécanisme que bilan-passage / observations-terrain) ──
-const APP_VERSION = '2026.09.12-2'; // à bumper avec SW_VERSION dans sw.js à chaque déploiement
+const APP_VERSION = '2026.09.12-3'; // à bumper avec SW_VERSION dans sw.js à chaque déploiement
 
 function checkForUpdate() {
   const updatePending = localStorage.getItem('pedlv_update_pending');
@@ -3675,8 +3751,8 @@ function buildReportHTML(d) {
 <body>
 
 <div id="print-bar">
-  <span>${d.animateur ? '✍ '+d.animateur : tr('rapport_pret')||'Rapport prêt'}</span>
-  <button onclick="window.print()">🖨 ${tr('btn_generate').includes('Generate') ? 'Print / Save PDF' : 'Imprimer / Enregistrer PDF'}</button>
+  <span>${d.animateur ? '✍ '+d.animateur : tr('rapport_pret')}</span>
+  <button onclick="window.print()">🖨 ${tr('print_button')}</button>
 </div>
 
 <div id="wrapper">
@@ -4194,7 +4270,7 @@ if (audTxeBad.length > 0) {
     ? prenom(audTxeBad[0].nom)+' à '+audTxeBad[0].txe.toFixed(0)+'% (obj. '+OBJ.txe+'%). Soigner le suivi des essais et relancer avant expiration. '
     : listNoms(audTxeBad, 3, a=>a.txe.toFixed(0)+'%')+'. Analyser les blocages à la concrétisation. ';
   const avgTxeVal = auds.length ? Math.round(auds.reduce((s,a)=>s+a.txe,0)/auds.length) : 0;
-  addPrio(PRIO.txe, tr('prio_txe_title')||('Tx réussite essai — sous objectif '+OBJ.txe+'%'), detail);
+  addPrio(PRIO.txe, tr('prio_txe_title', {obj: OBJ.txe}), detail);
 }
 
 // Assurance audio
