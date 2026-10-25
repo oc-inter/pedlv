@@ -1,0 +1,19 @@
+cle;libelle;defaut;ISRAEL;BELGIQUE;CANADA;Quebec;Ontario;ROYAUME-UNI;IRLANDE;SUISSE;LUXEMBOURG;ESPAGNE
+obj_ca;Objectif CA collaborateur (en k);20;;;;;;;;;;
+nb;Nb de ventes optique;50;;;;;;;;;;
+pm;Panier moyen optique;450;;;;;;;;;;
+pm1;PM 1ère paire;120;;;;;;;;;;
+sop;Taux SOP (%);40;;;;;;;;;;
+tc;Taux TC (%);95;;;;;;;;;;
+pack;Taux pack confort (%);50;;;;;;;;;;
+mdc;Taux MDC (%);66;;;;;;;;;;
+luk;Taux Lukkas (%);12;;;;;;;;;;
+pmpc;PM pack confort;80;;;;;;;;;;
+proth;Nb de prothèses;30;;;;;;;;;;
+txc;Taux de concrétisation (%);95;;;;;;;;;;
+txe;Taux d'essai (%);95;;;;;;;;;;
+assur;Taux assurance audio (%);70;;;;;;;;;;
+ta;Taux test auditif (%);30;;;;;;;;;;
+tva;Taux vente additionnelle audio (%);12;;;;;;;;;;
+pm_aud;PM audio;2350;;;;;;;;;;
+pm_app;PM appareillage;1250;;;;;;;;;;
